@@ -15,12 +15,12 @@ jobs:
             - name: Install Angular CLI globally
               run: npm install -g @angular/cli
             - name: Build Project
-              run: ng build
+              run: npm run build
             - name: Deploy via FTP
               uses: SamKirkland/FTP-Deploy-Action@v4.3.4
               with:
                 server: ${{ secrets.FTP_HOST }}
                 username: ${{ secrets.FTP_USERNAME }}
                 password: ${{ secrets.FTP_PASSWORD }}
-                local-dir: ./dist/
+                local-dir: ./dist/apr28/browser
                 server-dir: /public_html/modernangular/
