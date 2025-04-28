@@ -1,4 +1,4 @@
-name: "test project"
+name: "test project2"
 on: push
 jobs: 
     deploy:
