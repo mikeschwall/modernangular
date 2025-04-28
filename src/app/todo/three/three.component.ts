@@ -8,7 +8,7 @@ import { AfterContentInit, Component, ContentChild, ElementRef, OnInit, signal }
 })
 export class ThreeComponent implements OnInit,AfterContentInit {
 
-  mydata="before view child";
+  mydata="before view child2";
 
   counter = signal(0);
 
