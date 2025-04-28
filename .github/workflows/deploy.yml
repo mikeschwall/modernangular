@@ -28,4 +28,4 @@ jobs:
                 username: ${{ secrets.FTP_USERNAME }}
                 password: ${{ secrets.FTP_PASSWORD }}
                 local-dir: ./dist/apr28/browser/
-                server-dir: /modernangular/
+                server-dir: /public_html/modernangular/
