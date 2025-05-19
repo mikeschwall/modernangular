@@ -16,9 +16,9 @@ const routes:Routes = [];
     BrowserModule,
     AppRoutingModule,
     TodoModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
     
-  ],
+],
   providers: [],
   bootstrap: [AppComponent]
 })
