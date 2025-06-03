@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TodoModule } from './todo/todo.module';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes:Routes = [];
@@ -15,8 +14,7 @@ const routes:Routes = [];
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TodoModule,
-    RouterModule.forRoot(routes),
+   
     
 ],
   providers: [],
