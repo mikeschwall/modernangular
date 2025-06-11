@@ -5,8 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
-import { TodoModule } from './todo/todo.module';
-import { counterReducer } from './reducers';
 
 const routes:Routes = [];
 
@@ -17,10 +15,8 @@ const routes:Routes = [];
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({counter:counterReducer}),
-    TodoModule,
+    StoreModule.forRoot({}),
     RouterModule.forRoot(routes),
-    StoreModule.forRoot({}, {})
     
 ],
   providers: [],
