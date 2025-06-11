@@ -19,7 +19,8 @@ const routes:Routes = [];
     AppRoutingModule,
     StoreModule.forRoot({counter:counterReducer}),
     TodoModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    StoreModule.forRoot({}, {})
     
 ],
   providers: [],
