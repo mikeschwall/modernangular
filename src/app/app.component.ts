@@ -1,5 +1,4 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { CourseService, Employee } from './todo/course.service';
 
 @Component({
   selector: 'app-root',
@@ -9,20 +8,14 @@ import { CourseService, Employee } from './todo/course.service';
 })
 export class AppComponent implements OnInit  {
 
-  mydata?:Employee;
+  
 
-  constructor(private courseService:CourseService) {}
+  constructor() {}
 
   ngOnInit(): void {
     
   }
 
-  getdata(test:any) {
-    this.courseService.getPerson(test).subscribe(item => this.mydata = item);
-  }
-
-  final(test:any) {
-    console.log(test);
-  }
+  
 
 }
