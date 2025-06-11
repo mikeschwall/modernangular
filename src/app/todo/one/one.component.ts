@@ -1,11 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CourseService } from '../courseservice';
 
 @Component({
-  selector: 'app-one',
+  selector: 'one',
   standalone: false,
   templateUrl: './one.component.html',
   styleUrl: './one.component.css'
 })
-export class OneComponent {
+export class OneComponent implements OnInit {
 
+  mydata:any;
+
+  constructor(private courseService:CourseService) {}
+
+  ngOnInit(): void {
+    this.courseService.getdata().subscribe(item => this.mydata = item);
+  }
 }

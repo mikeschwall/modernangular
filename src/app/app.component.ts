@@ -8,14 +8,15 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 })
 export class AppComponent implements OnInit  {
 
-  
-
   constructor() {}
 
   ngOnInit(): void {
     
   }
 
+  getdata(test:any) {
+    console.log(test);
+  }
   
 
 }
