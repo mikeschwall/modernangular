@@ -1,58 +1,43 @@
 {
-  "hash": "881cff0e",
-  "configHash": "9f1136f0",
+  "hash": "a1a49626",
+  "configHash": "aa939e5e",
   "lockfileHash": "2f15c2de",
-  "browserHash": "e5db7054",
+  "browserHash": "b4818ba6",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "fdc9b276",
+      "fileHash": "b57c1f83",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "b5f93a08",
+      "fileHash": "3df58181",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "07879430",
+      "fileHash": "b955b4ea",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "fc76dc34",
-      "needsInterop": false
-    },
-    "@ngrx/store": {
-      "src": "../../../../../../node_modules/@ngrx/store/fesm2022/ngrx-store.mjs",
-      "file": "@ngrx_store.js",
-      "fileHash": "31665866",
-      "needsInterop": false
-    },
-    "rxjs": {
-      "src": "../../../../../../node_modules/rxjs/dist/esm5/index.js",
-      "file": "rxjs.js",
-      "fileHash": "957cef78",
+      "fileHash": "3ac45fe8",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-HHRLM27Z": {
-      "file": "chunk-HHRLM27Z.js"
+    "chunk-TYUE276M": {
+      "file": "chunk-TYUE276M.js"
     },
-    "chunk-C6ZCWS4E": {
-      "file": "chunk-C6ZCWS4E.js"
+    "chunk-Z2KYW2RI": {
+      "file": "chunk-Z2KYW2RI.js"
     },
-    "chunk-WVMZWLDY": {
-      "file": "chunk-WVMZWLDY.js"
-    },
-    "chunk-S35MAB2V": {
-      "file": "chunk-S35MAB2V.js"
+    "chunk-FWG627IE": {
+      "file": "chunk-FWG627IE.js"
     }
   }
 }
