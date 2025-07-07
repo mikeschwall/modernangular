@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
+import { TodoModule } from './todo/todo.module';
+import { provideHttpClient } from '@angular/common/http';
+import { incrementReducer } from './todo/store/reducers/counter.reducer';
 
 
 const routes:Routes = [];
@@ -16,9 +19,13 @@ const routes:Routes = [];
   imports: [
     BrowserModule,
     AppRoutingModule,
+    TodoModule,
+    StoreModule.forRoot({counter:incrementReducer})
     
 ],
-  providers: [],
+  providers: [
+    provideHttpClient()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
