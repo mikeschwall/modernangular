@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
+import { TodoModule } from './todo/todo.module';
+import { provideHttpClient } from '@angular/common/http';
 
 
 const routes:Routes = [];
@@ -16,11 +18,13 @@ const routes:Routes = [];
   imports: [
     BrowserModule,
     AppRoutingModule,
+    TodoModule,
     RouterModule.forRoot(routes),
     StoreModule.forRoot({})
     
 ],
   providers: [
+    provideHttpClient()
   ],
   bootstrap: [AppComponent]
 })
