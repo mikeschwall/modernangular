@@ -1,17 +1,9 @@
-<three (myoutput)="final($event)">
-
-</three>
-<hr/>
-
-<one (myoutput)="getData($event)"></one>
-<two>
-    <div *ngIf="mydata; else mike">
-    {{mydata.title}}
-</div>
-
-<ng-template #mike>
-    <div>
-        sorry
+<three>
+    <div #mike>
+        {{mydata}}
     </div>
-</ng-template>
-</two>
+</three>
+<hr>
+<two></two>
+<hr>
+<one></one>
