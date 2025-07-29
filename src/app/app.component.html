@@ -1,9 +1,12 @@
-<three>
-    <div #mike>
-        {{mydata}}
-    </div>
-</three>
-<hr>
-<two></two>
-<hr>
-<one></one>
+<three (myoutput)="final($event)"></three>
+<hr/>
+<one (myoutput)="getdata($event)"></one>
+<two>
+    <div *ngIf="mydata; else mike">
+    {{mydata.title}}
+</div>
+
+<ng-template #mike>
+    sorry
+</ng-template>
+</two>
