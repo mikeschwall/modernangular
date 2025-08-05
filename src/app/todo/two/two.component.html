@@ -1,0 +1,11 @@
+<p>two works!</p>
+
+<form [formGroup]="mygroup" (ngSubmit)="onClick()">
+    food <input type="text" formControlName="food" />
+    <button type="submit">send</button>
+
+</form>
+<br/><br/>
+<div *ngFor="let test of foodArray">
+    {{test}}
+</div>
