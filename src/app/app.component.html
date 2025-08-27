@@ -1,1 +1,14 @@
-test
+<three (myoutput)="final($event)"></three>
+<hr/>
+<one (myoutput)="onClick($event)"></one>
+<two>
+    <div *ngIf="mydata; else mike">
+    {{mydata.title}}
+</div>
+
+<ng-template #mike>
+    <div>
+        sorry
+    </div>
+</ng-template>
+</two>
