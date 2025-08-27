@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 import { provideHttpClient } from '@angular/common/http';
-import { TodoModule } from './todo/todo.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 
 
@@ -19,7 +18,6 @@ const routes:Routes = [];
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TodoModule,
     FormsModule,
     ReactiveFormsModule,
     StoreModule.forRoot({})
