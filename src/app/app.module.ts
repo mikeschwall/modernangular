@@ -6,19 +6,21 @@ import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 import { provideHttpClient } from '@angular/common/http';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms'
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { TodoModule } from './todo/todo.module';
 
 
 const routes:Routes = [];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    TodoModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
     StoreModule.forRoot({})
