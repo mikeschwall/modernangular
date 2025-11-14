@@ -9,7 +9,7 @@ import { AlertComponent } from '../alert/alert.component';
 })
 export class InitComponent implements OnInit {
 
-  constructor(private viewContainer:ViewContainerRef) {
+  constructor(private viewContainerRef:ViewContainerRef) {
 
   }
 
@@ -18,7 +18,7 @@ export class InitComponent implements OnInit {
   }
 
   onClick() {
-    this.viewContainer.createComponent(AlertComponent);
+    this.viewContainerRef.createComponent(AlertComponent);
   }
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { CourseService } from '../course.service';
 
 @Component({
@@ -10,33 +10,17 @@ import { CourseService } from '../course.service';
 })
 export class TwoComponent implements OnInit {
 
-  mygroup!:FormGroup;
-  finalArray:any[] = [];
+  myroute:any;
+  mydata:any;
 
-  constructor(private courseService:CourseService) {
+  constructor(private route: ActivatedRoute, private courseService:CourseService) {
 
   }
 
   ngOnInit(): void {
-    this.mygroup = new FormGroup({
-      food: new FormControl(null)
-    })
-  }
-
-  handlePost = () => {
-    this.courseService.getFire().subscribe((object:Record<any,any>) => {
-      for (let key in object) {
-        this.finalArray.push(object[key]);
-      }
-    })
-  }
-
-  onClick() {
-    this.courseService.sendData(this.mygroup.value.food).subscribe(() => console.log("sent"));
-    setTimeout(() => {
-      this.finalArray = [];
-      this.handlePost();
-    }, 500);
+    this.route.params.subscribe(item => this.myroute = item["id"]);
+    this.courseService.getPerson(this.myroute).subscribe(item => this.mydata = item);
+    
   }
 
 }

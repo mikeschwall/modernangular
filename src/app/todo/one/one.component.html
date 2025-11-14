@@ -1,5 +1,7 @@
 <p>one works!</p>
-<input type="text" ngModel #mike="ngModel" name="mike"/>
-<div *ngFor="let test of mydata | mypipe:mike.value">
-    {{test.title}}
+
+<div *ngFor="let test of mydata; let i = index">
+    <a href="javascript:void(0)" (click)="onClick(i)">
+        {{test.name}}
+    </a>
 </div>
