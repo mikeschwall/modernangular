@@ -7,6 +7,8 @@ import { InitComponent } from './init/init.component';
 import { OneComponent } from './one/one.component';
 import { TwoComponent } from './two/two.component';
 import { ThreeComponent } from './three/three.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
+import { CoursePipe } from './course.pipe';
 
 
 @NgModule({
@@ -19,7 +21,10 @@ import { ThreeComponent } from './three/three.component';
   ],
   imports: [
     CommonModule,
-    TodoRoutingModule
+    TodoRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    CoursePipe
   ],
   exports:[
     InitComponent,

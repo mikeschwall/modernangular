@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { CourseService } from '../course.service';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'two',
@@ -10,16 +10,34 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class TwoComponent implements OnInit {
 
-  myroute:any;
   mydata:any;
+  mygroup!:FormGroup;
+  finalArray:any[] = [];
 
-  constructor(private route:ActivatedRoute,private courseService:CourseService) {
+  constructor(private courseService:CourseService) {
 
   }
 
   ngOnInit(): void {
-    this.route.params.subscribe(item => this.myroute = item["id"]);
-    this.courseService.getPerson(this.myroute).subscribe(item => this.mydata = item);
+    this.mygroup = new FormGroup({
+      food: new FormControl(null)
+    })
+  }
+
+  handleForm = () => {
+    this.courseService.getfire().subscribe((object:Record<any,any>) => {
+      for (let key in object) {
+        this.finalArray.push(object[key]);
+      }
+    })
+  }
+
+  onClick() {
+    this.courseService.senddata(this.mygroup.value.food).subscribe(() => console.log("sent"));
+    setTimeout(() => {
+      this.finalArray = [];
+      this.handleForm();
+    }, 500);
   }
 
 }

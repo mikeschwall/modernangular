@@ -1,3 +1,9 @@
 <p>two works!</p>
 
-<ng-content></ng-content>
+<form [formGroup]="mygroup" (ngSubmit)="onClick()">
+    <input type="text" formControlName="food" /> <button type="submit">send</button>
+</form>
+
+<div *ngFor="let test of finalArray">
+    {{test}}
+</div>
