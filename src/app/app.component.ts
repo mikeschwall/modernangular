@@ -1,5 +1,4 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { ThreeComponent } from './todo/three/three.component';
 
 
 @Component({
@@ -10,8 +9,6 @@ import { ThreeComponent } from './todo/three/three.component';
 })
 export class AppComponent implements OnInit,AfterViewInit  {
 
-mydata = "before content inti"
-@ViewChild(ThreeComponent) three!:ThreeComponent;
   
   constructor() {
 
@@ -22,7 +19,7 @@ mydata = "before content inti"
   }
 
   ngAfterViewInit(): void {
-    this.three.mydata="AFTER VIEW ININ"
+
   }
 
   
