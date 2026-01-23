@@ -1,4 +1,5 @@
 import {
+  BehaviorSubject,
   DestroyRef,
   Inject,
   Injectable,
@@ -6,39 +7,36 @@ import {
   Injector,
   NgModule,
   NgZone,
+  Observable,
   Optional,
   RuntimeError,
+  Subject,
+  __spreadProps,
+  __spreadValues,
   assertInInjectionContext,
   assertNotInReactiveContext,
   computed,
+  distinctUntilChanged,
   effect,
   inject,
   isDevMode,
   makeEnvironmentProviders,
+  map,
+  observeOn,
+  pluck,
   provideEnvironmentInitializer,
+  queueScheduler,
+  scan,
   setClassMetadata,
   signal,
   untracked,
+  withLatestFrom,
   ɵɵdefineInjectable,
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵgetInheritedFactory,
   ɵɵinject
-} from "./chunk-WVMZWLDY.js";
-import {
-  BehaviorSubject,
-  Observable,
-  Subject,
-  __spreadProps,
-  __spreadValues,
-  distinctUntilChanged,
-  map,
-  observeOn,
-  pluck,
-  queueScheduler,
-  scan,
-  withLatestFrom
-} from "./chunk-S35MAB2V.js";
+} from "./chunk-DR4NP47E.js";
 
 // node_modules/@angular/core/fesm2022/rxjs-interop.mjs
 function toSignal(source, options) {
