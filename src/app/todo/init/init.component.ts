@@ -7,7 +7,7 @@ import { AlertComponent } from '../alert/alert.component';
   templateUrl: './init.component.html',
   styleUrl: './init.component.css'
 })
-export class InitComponent implements OnInit {
+export class InitComponent implements OnInit{
 
   constructor(private viewContainerRef:ViewContainerRef) {
 

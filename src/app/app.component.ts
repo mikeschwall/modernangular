@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { CourseService } from './todo/course.service';
+import { ThreeComponent } from './todo/three/three.component';
 
 
 @Component({
@@ -9,11 +9,11 @@ import { CourseService } from './todo/course.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit,AfterViewInit  {
-  mydata:any;
+  mydata = "before content child"
 
-
+@ViewChild(ThreeComponent) three!:ThreeComponent;
   
-  constructor(private courseService:CourseService) {
+  constructor() {
 
   }
 
@@ -22,13 +22,12 @@ export class AppComponent implements OnInit,AfterViewInit  {
   }
 
   ngAfterViewInit(): void {
-
+this.three.mydata = "AFTER VIEW CHILD";
   }
 
   
 
   getdata(test:any) {
-  this.courseService.getPerson(test).subscribe(item => this.mydata = item);    
 
   }
 
