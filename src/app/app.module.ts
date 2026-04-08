@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 import { provideHttpClient } from '@angular/common/http';
+import { TodoModule } from './todo/todo.module';
 
 
 const routes:Routes = [];
@@ -17,6 +18,7 @@ const routes:Routes = [];
   imports: [
     BrowserModule,
     AppRoutingModule,
+    TodoModule,
     RouterModule.forRoot(routes),
     StoreModule.forRoot({})
     
