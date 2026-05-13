@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CourseService } from '../course.service';
 import { FormControl, FormGroup } from '@angular/forms';
+import { CourseService } from '../course.service';
 
 @Component({
   selector: 'two',
@@ -20,10 +20,11 @@ export class TwoComponent implements OnInit {
     this.mygroup = new FormGroup({
       food: new FormControl(null)
     })
+    
   }
 
   onClick() {
-    this.courseService.senddata(this.mygroup.value.food).subscribe(item => console.log(item));
+    this.courseService.sendData(this.mygroup.value.food).subscribe((item) => console.log(item));
   }
 
 }

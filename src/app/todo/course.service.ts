@@ -7,12 +7,12 @@ export class CourseService {
 
     }
 
-    getdata() {
+    getData() {
         return this.http.get("https://jsonplaceholder.typicode.com/todos")
     }
 
-    senddata(test:any) {
-        const data = JSON.stringify(test);
+    sendData(json:any) {
+        const data = JSON.stringify(json);
         return this.http.post("https://jsonplaceholder.typicode.com/posts",data);
     }
 }
