@@ -16,7 +16,8 @@ export class OneComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.courseService.getdata().subscribe(item => this.mydata = item);
+    this.courseService.getData().subscribe(item => this.mydata = item);
+    
   }
 
 }
