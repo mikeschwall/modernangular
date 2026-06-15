@@ -1,18 +1,24 @@
-import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { Inject, Injectable } from "@angular/core";
+import { Observable, of } from "rxjs";
+
+interface Employee {
+    name:string;
+    title:string;
+}
 
 @Injectable({providedIn:'root'})
 export class CourseService {
-    constructor(private http:HttpClient) {
+ employees:Employee[] = [
+    {name:"john",title:"developer"},
+    {name:"paul",title:"manager"},
+    {name:"peter",title:"graphics"}
+ ];
 
-    }
+ getData():Observable<Employee[]> {
+    return of(this.employees);
+ }
 
-    getData() {
-        return this.http.get("https://jsonplaceholder.typicode.com/todos")
-    }
-
-    sendData(json:any) {
-        const data = JSON.stringify(json);
-        return this.http.post("https://jsonplaceholder.typicode.com/posts",data);
-    }
+ getPerson(id:number):Observable<Employee> {
+    return of(this.employees[id]);
+ }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { CourseService } from '../course.service';
 
 @Component({
@@ -10,21 +10,16 @@ import { CourseService } from '../course.service';
 })
 export class TwoComponent implements OnInit {
 
-  mygroup!:FormGroup;
+  myroute:any;
+  mydata:any;
 
-  constructor(private courseService:CourseService) {
+  constructor(private route:ActivatedRoute, private courseService:CourseService) {
 
   }
 
   ngOnInit(): void {
-    this.mygroup = new FormGroup({
-      food: new FormControl(null)
-    })
-    
-  }
-
-  onClick() {
-    this.courseService.sendData(this.mygroup.value.food).subscribe((item) => console.log(item));
+    this.route.params.subscribe(item => this.myroute = item["id"]);
+    this.courseService.getPerson(this.myroute).subscribe(item => this.mydata = item);
   }
 
 }
