@@ -1,4 +1,4 @@
-import { AfterContentInit, Component, ContentChild, contentChild, ElementRef, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'three',
@@ -6,21 +6,22 @@ import { AfterContentInit, Component, ContentChild, contentChild, ElementRef, On
   templateUrl: './three.component.html',
   styleUrl: './three.component.css'
 })
-export class ThreeComponent implements OnInit, AfterContentInit {
+export class ThreeComponent implements OnInit {
 
-  mydata= "before view child";
-  @ContentChild("mike")mike!:ElementRef;
+  @Input() myinput = false;
+  @Output() myoutput = new EventEmitter<boolean>();
 
   constructor() {
 
   }
 
-  ngAfterContentInit(): void {
-    this.mike.nativeElement.innerHTML="AFTER CONTENT INIT"
-  }
-
   ngOnInit(): void {
     
+  }
+
+  onClick() {
+    this.myinput = !this.myinput;
+    this.myoutput.emit(this.myinput);
   }
 
 }
