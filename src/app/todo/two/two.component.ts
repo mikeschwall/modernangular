@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { CourseService } from '../course.service';
 
 @Component({
   selector: 'app-two',
@@ -6,6 +8,18 @@ import { Component } from '@angular/core';
   templateUrl: './two.component.html',
   styleUrl: './two.component.css'
 })
-export class TwoComponent {
+export class TwoComponent implements OnInit{
+  
+  mydata:any;
+  myroute:any;
+
+  constructor(private route:ActivatedRoute, private courseService:CourseService) {
+
+  }
+
+  ngOnInit(): void {
+    this.route.params.subscribe(item => this.myroute = item["id"]);
+    this.courseService.getPerson(this.myroute).subscribe(item => this.mydata = item);
+  }
 
 }

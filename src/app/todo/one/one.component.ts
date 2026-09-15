@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { CourseService } from '../course.service';
 
 @Component({
   selector: 'app-one',
@@ -6,6 +7,22 @@ import { Component } from '@angular/core';
   templateUrl: './one.component.html',
   styleUrl: './one.component.css'
 })
-export class OneComponent {
+export class OneComponent implements OnInit {
+
+  mydata:any;
+  @Output() myoutput = new EventEmitter<any>();
+
+  constructor(private courseService:CourseService) {
+
+  }
+
+  ngOnInit(): void {
+    this.courseService.getData().subscribe(item => this.mydata = item);
+    
+  }
+
+  onClick(id:any) {
+    this.myoutput.emit(id);
+  }
 
 }
