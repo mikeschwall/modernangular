@@ -13,12 +13,11 @@ const routes:Routes = [];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TodoModule,
     RouterModule.forRoot(routes),
     StoreModule.forRoot({})
     
