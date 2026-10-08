@@ -20,7 +20,7 @@ export class ThreeComponent implements OnInit, AfterContentInit {
   }
 
   ngAfterContentInit(): void {
-    this.mike.nativeElement.innerHTML="AFTER CONTENT CHILD"
+    this.mike.nativeElement.innerHTML="AFTER CONTENT CHILD2"
   }
 
 }
