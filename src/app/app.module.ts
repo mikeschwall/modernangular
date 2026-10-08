@@ -18,6 +18,7 @@ const routes:Routes = [];
   imports: [
     BrowserModule,
     AppRoutingModule,
+    TodoModule,
     RouterModule.forRoot(routes),
     StoreModule.forRoot({})
     
