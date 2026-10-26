@@ -1,1 +1,11 @@
-test
+<app-three (myoutput)="final($event)"></app-three>
+<hr/>
+<app-one (myoutput)="getdata($event)"></app-one>
+<app-two>
+    <div *ngIf="mydata; else mike">
+    {{mydata.title}}
+</div>
+<ng-template #mike>
+    sorry no data
+</ng-template>
+</app-two>
